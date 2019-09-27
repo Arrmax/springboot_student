@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ * 学生查询
+ */
 @Controller
 @RequestMapping("/stu")
 public class stuconterller {
