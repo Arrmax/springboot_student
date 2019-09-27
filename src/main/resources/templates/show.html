@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>编码</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>电话</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="stu : ${stulist} ">
+        <td th:text=" ${stu.id}"></td>
+        <td th:text=" ${stu.username}"></td>
+        <td th:text=" ${stu.age}"></td>
+        <td th:text=" ${stu.stunumber}"></td>
+        <td><a>编辑</a><a th:href="| /stu/delete/${stu.id} |">删除</a></td>
+    </tr>
+</table>
+</body>
+</html>
